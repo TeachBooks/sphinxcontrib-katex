@@ -177,7 +177,7 @@ def builder_inited(app):
     # Ensure the static path is setup to hold KaTeX CSS and autorender files
     setup_static_path(app)
     # KaTeX CSS
-    add_css(app.config.katex_css_path)
+    add_css(app.config.katex_css_path, crossorigin='anonymous')
     if not app.config.katex_prerender:
         # KaTeX JS
         add_js(app.config.katex_js_path)
